@@ -19,7 +19,7 @@ def merge_sort(lst):
 
     k = len(lst)
     if (k <= 1): 
-        return []
+        return lst
     mid = len(lst) // 2
     
     A = merge_sort(lst[:mid])
