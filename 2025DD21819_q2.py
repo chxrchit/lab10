@@ -43,8 +43,7 @@ class matrix:
     
     def __eq__(self, other):
         if self.n != other.n or self.m != other.m:
-            print('False')
-            return matrix([[0]])
+            return False
         
         for i in range(self.n):
             for j in range(self.m):
