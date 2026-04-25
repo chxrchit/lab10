@@ -18,7 +18,7 @@ def merge(left, right):
 def merge_sort(lst):
 
     k = len(lst)
-    if (k <= 0): 
+    if (k <= 1): 
         return []
     mid = len(lst) // 2
     
