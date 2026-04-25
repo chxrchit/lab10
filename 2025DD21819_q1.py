@@ -27,4 +27,5 @@ def merge_sort(lst):
     
     return merge(A, B)
     
-print(merge_sort(n))
+for x in merge_sort(n):
+    print(x)
