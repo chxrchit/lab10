@@ -2,6 +2,7 @@ n = list(map(int,input().split()))
 
 def merge(left, right):
     temp = []
+    (i,j) = (0,0)
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             temp.append(left[i])
@@ -12,15 +13,17 @@ def merge(left, right):
     temp.extend(left[i:])
     temp.extend(right[j:])
     
+    return temp
+    
 def merge_sort(lst):
 
     k = len(lst)
     if (k == 0): 
         return []
-    mid = len // 2
+    mid = len(lst) // 2
     
     A = merge_sort(lst[:mid])
-    B = merges_sort(lst[mid:])
+    B = merge_sort(lst[mid:])
     
     return merge(A, B)
     
